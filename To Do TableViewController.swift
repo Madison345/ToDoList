@@ -11,6 +11,12 @@ import UIKit
 class To_Do_TableViewController: UITableViewController {
 var toDos : [ToDo] = []
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        toDos = createToDos()
+    }
+    
     func createToDos() -> [ToDo] {
         
         let swift = ToDo()
@@ -24,11 +30,7 @@ var toDos : [ToDo] = []
         return [swift, dog]
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        toDos = createToDos()
-    }
+  
 
     // MARK: - Table view data source
 
